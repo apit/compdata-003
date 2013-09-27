@@ -58,3 +58,23 @@ mean(z[,4])
 z <- subset(h, Month == 5 & !is.na(Ozone))
 max(z[,1])
 ```
+
+### Extra programming assignment
+
+```{r}
+my.unique<- function(x){
+  ones<-levels(factor(unlist(x)))
+  return(ones)
+}
+
+#or
+
+my.unique<- function(x){
+ ifelse(is.numeric(x),
+        ones<-as.numeric(levels(factor(unlist(x)))),
+        ones<-levels(factor(unlist(x)))
+        )
+  return(ones)
+}
+```
+
